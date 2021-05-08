@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for listing in listings %}
+      <tr>
+        <td>{{listing.title}}</td>
+        <td>{{listing.location.city}}</td>
+        <td>{{listing.location.state}}</td>
+        <td><a href="{% url 'update' listing.id %}">Update</a></td>
+        <td><a href="{% url 'delete' listing.id %}">Delete</a> </td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

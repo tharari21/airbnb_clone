@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+  {% if searched %}
+  <h1>Showing all results for zip code {{searched}} </h1>
+  <br>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for listing in listings %}
+      <tr>
+        <td>{{listing.title}}</td>
+        <td>{{listing.location.city}}</td>
+        <td>{{listing.location.state}}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    
+  
+  {% else %}
+  <h1>Use the search bar to search for a listing by zip code!</h1>
+  {% endif %}
+</center>
+{% endblock %}
