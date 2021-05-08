@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+
+  <div class="container">
+      <h1 class="listingTitle">{{listing.title}}</h1>
+      <br>
+      <div class="listingImage">
+      <img src="{% static 'images/nice_place.png' %}" alt="" width="300" height="300">
+    </div> 
+    <br> 
+    <p><b>Price:</b> ${{listing.price_per_night}} /night</p>
+      <p class="listingDesc"> <b>DESCRIPTION:</b> {{listing.description}}</p>
+      <p>Address 1: {{listing.location.address1 }}</p>
+      <p>Address 2: {{listing.location.address2 }}</p>
+      <p>Zip Code: {{listing.location.zip_code}}</p>
+      <p>City: {{listing.location.city}}</p>
+      <p>State: {{listing.location.state }}</p>
+        
+
+  </div>
+
+{% endblock %}

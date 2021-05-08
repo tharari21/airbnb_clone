@@ -1,0 +1,16 @@
+.listingTitle {
+  text-align: right;
+}
+.listingImage {
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  /* max-width: 100%; */
+}
+
+.listingDesc {
+  font-size: 20px;
+  padding-left: 20px;
+}

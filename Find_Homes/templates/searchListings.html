@@ -17,7 +17,7 @@
     <tbody>
       {% for listing in listings %}
       <tr>
-        <td>{{listing.title}}</td>
+        <td><a href="{% url 'get_home' listing.id %}">{{listing.title}}</a></td>
         <td>{{listing.location.city}}</td>
         <td>{{listing.location.state}}</td>
       </tr>

@@ -85,3 +85,9 @@ def delete_listing(request, pk):
         location.delete()
         return redirect('/')
     return render(request, 'delete.html', {'item': listing})
+
+
+def get_home(request, pk):
+    listing = Listing.objects.get(id=pk)
+    if request.method == 'GET':
+        return render(request, 'Listing.html', {'listing': listing})

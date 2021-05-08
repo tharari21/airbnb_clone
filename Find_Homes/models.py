@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Model
 from django.utils import timezone
+
 # from django.core import reverse
 
 # Create your models here.
@@ -40,18 +41,3 @@ class Location(Model):
 
     def __str__(self):
         return self.address1
-
-
-# class Amenities():
-#     amenity_id = models.AutoField()
-#     amenity_description = models.CharField(max_length=200)
-
-# def User(Model):
-#     # User - id, name, date_of_birth, rating, phone number, email, ssn, credit_card_number, isHost - Maybe reserve certain ids for hosts.
-#     user_id = models.IntegerField()
-#     name = models.CharField()
-#     dob = models.DateField()
-#     rating = models.RatingField()
-#     phone_number = models.PhoneNumberField()
-#     email = models.EmailField()
-#     ssn = models.CharField()

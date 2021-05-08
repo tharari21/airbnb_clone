@@ -15,6 +15,7 @@ class ListingForm(forms.ModelForm):
         exclude = ['location']
 
 
+
 # class EditListing(forms.ModelForm):
 #     class Meta:
 #         model = Listing
