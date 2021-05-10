@@ -1,17 +1,1 @@
 {% extends 'base.html' %}
-
-{% block content %}
-<div class="title"><h1><b>Find Places To Stay!</b> </h1></div>
-
-<form>
-  {% csrf_token %}
-    <div class="zipCodeSearch">
-      <label for="inputZip" class="form-label">Zip Code</label>
-      <input type="text" class="form-control" id="inputZip"  style="width: 200px">
-    </div>
-    
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  
-  {% endblock %}

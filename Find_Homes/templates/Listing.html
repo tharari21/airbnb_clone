@@ -8,7 +8,7 @@
       <h1 class="listingTitle">{{listing.title}}</h1>
       <br>
       <div class="listingImage">
-      <img src="{% static 'images/nice_place.png' %}" alt="" width="300" height="300">
+      <img src="{{ listing.images.url }}" alt="" width="300" height="300">
     </div> 
     <br> 
     <p><b>Price:</b> ${{listing.price_per_night}} /night</p>

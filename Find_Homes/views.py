@@ -25,7 +25,7 @@ def find_home(request):
 def create_listing(request):
 
     if request.method == 'POST':
-        form1 = ListingForm(request.POST)
+        form1 = ListingForm(request.POST, request.FILES)
         form2 = LocationForm(request.POST)
         if form1.is_valid() and form2.is_valid():
 
