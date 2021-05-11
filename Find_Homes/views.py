@@ -59,7 +59,7 @@ def update_listing(request, pk):
     form1 = ListingForm(instance=listing)
     form2 = LocationForm(instance=location)
     if request.method == 'POST':
-        form1 = ListingForm(request.POST, instance=listing)
+        form1 = ListingForm(request.POST, request.FILES, instance=listing)
         form2 = LocationForm(request.POST, instance=location)
         if form1.is_valid() and form2.is_valid():
 
